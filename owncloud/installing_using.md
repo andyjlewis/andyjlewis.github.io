@@ -252,11 +252,57 @@ You just installed your ownCloud server!
 
 ## Enable your Users to Connect to your ownCloud Server from a Web Browser
 
-1. Confirm that users can use the URL by pointing your web browser to your ownCloud installation.
+[//]: # (Confirm that users can use the URL by pointing your web browser to your ownCloud installation.)
+
+[//]: # (Sources)
+[//]: # (https://doc.owncloud.org/server/10.4/admin_manual/installation/changing_the_web_route.html)
+[//]: # (https://doc.owncloud.org/server/10.4/user_manual/webinterface.html)
+
+You can connect to your ownCloud server from any of the following Web browsers:
+
+* Edge (current version on Windows 10)
+
+* IE11 or newer (except Compatibility Mode)
+
+* Firefox 60 ESR or newer
+
+* Chrome 66 or newer
+
+* Safari 10 or newer
+
+[//]: # (Just point it to your ownCloud server and enter your username and password.)
 
 ## Add a User Account
 
+To add a user:
+
+[//]: # (https://doc.owncloud.com/server/10.4/admin_manual/configuration/user/user_configuration.html)
+
+[//]: # (todo: how does user get to the default view?)
+
+1. Go to the **default view**.
+
+1. Enter the new user's **Login Name (Username)**.
+
+   Login names can contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). 
+
+1. Enter the new user's **E-Mail** address.
+
+1. (Optional) Select the **Groups** in which you want the user to be a member.
+
+1. Click the **[ Create ]** button.
+
+1. (Optional) After you've created the user, you can enter their **Full Name**. Or, the user can do it later if they want.
+
+### Learn more
+
+* If you want to add and manage users from the command line or from your own custom web application, you can use an HTTP-based API. See [User Provisioning API](https://doc.owncloud.com/server/10.4/admin_manual/configuration/user/user_provisioning_api.html).
+
 ## Connect to your ownCloud server from a Desktop Client
+
+### Prerequisites
+
+[Install the 
 
 ## Connect to your ownCloud server from an Android Client
 
