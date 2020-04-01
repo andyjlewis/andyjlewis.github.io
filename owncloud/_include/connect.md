@@ -1,4 +1,4 @@
-## Get your Users Connected
+## Getting your Users Connected
 
 When you're ready to open your ownCloud server to your users, here are the manuals to help them get started:
 

@@ -1,4 +1,4 @@
-## Add a User
+## Adding a User
 
 To add a user:
 
