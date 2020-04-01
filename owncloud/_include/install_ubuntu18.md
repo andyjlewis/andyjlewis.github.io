@@ -1,21 +1,10 @@
----
-layout: owncloud
-title: Installing and Using ownCloud
----
-# Installing and Using ownCloud
-
-If you're new to ownCloud and looking to quickly try out a small deployment, then this guide is for you.
-In this quick start guide, we'll take you step-by-step from installing your ownCloud server as an administrator to connecting to the server as a user.
-
 [//]: # (Primary sources)
 [//]: # (https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html#scenario-1-small-workgroups-and-departments)
 [//]: # (https://doc.owncloud.org/server/10.4/admin_manual/installation/ubuntu_18_04.html)
 
-> If you're an experienced administrator for an organization that needs to scale out to mid-sized or large enterprises, see [Deployment Recommendations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
-
 ## System Requirements
 
-A single machine with:
+A machine with:
 
 * A fresh install of the Ubuntu 18.04 LTS operating system with SSH enabled
 
@@ -26,7 +15,6 @@ A single machine with:
 [//]: # (OS: https://doc.owncloud.org/server/10.4/admin_manual/installation/system_requirements.html#officially-recommended-environment)
 [//]: # (Storage: https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html#scenario-1-small-workgroups-and-departments)
 [//]: # (RAM: https://doc.owncloud.org/server/10.4/admin_manual/installation/system_requirements.html#memory-requirements)
-
 
 In the following sections we'll guide you through installing the following software: 
 
@@ -254,86 +242,28 @@ Connect to your machine as the root user.
 
 You just installed your ownCloud server!
 
-## Enable your Users to Connect to your ownCloud Server from a Web Browser
+### Q&A
 
-[//]: # (Confirm that users can use the URL by pointing your web browser to your ownCloud installation.)
+* Q: How Much Scale Can the Above Deployment Support?
 
-[//]: # (Sources)
-[//]: # (https://doc.owncloud.org/server/10.4/admin_manual/installation/changing_the_web_route.html)
-[//]: # (https://doc.owncloud.org/server/10.4/user_manual/webinterface.html)
+  A: The above deployment can support up to 150 users with up to 10TB of data.
 
-You can connect to your ownCloud server from any of the following Web browsers:
+* Q: What Kind of Availability Can the Above Deployment Offer?
 
-* Edge (current version on Windows 10)
+  A: The availability depends on the file system and backup approach you use:
 
-* IE11 or newer (except Compatibility Mode)
+    - On a Btrfs file system, you can achieve zero-downtime backups by using snapshots. (However, component failure will still cause interruption of service.)
 
-* Firefox 60 ESR or newer
+    - On other kinds of file systems, you can use nightly backup schemes to limit service interruptions to less busy times.
 
-* Chrome 66 or newer
+* Q: What SMB limitations are there When Using Ubuntu 18.04?
 
-* Safari 10 or newer
+  A: Ubuntu 18.04 includes smbclient 4.7.6, which has a known limitation of only using version 1 of the SMB protocol.
 
-[//]: # (Just point it to your ownCloud server and enter your username and password.)
+* Q: What are prefork and mod_php?
 
-## Add a User Account
+  A: [prefork and mod_php](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#multi-processing-module-mpm)
 
-To add a user:
+* Q: Where can I Learn More about ownClould Console (occ) Commands?
 
-[//]: # (https://doc.owncloud.com/server/10.4/admin_manual/configuration/user/user_configuration.html)
-
-[//]: # (todo: how does user get to the default view?)
-
-1. Go to the **default view**.
-
-1. Enter the new user's **Login Name (Username)**.
-
-   Login names can contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). 
-
-1. Enter the new user's **E-Mail** address.
-
-1. (Optional) Select the **Groups** in which you want the user to be a member.
-
-1. Click the **[ Create ]** button.
-
-1. (Optional) After you've created the user, you can enter their **Full Name**. Or, the user can do it later if they want.
-
-### Learn more
-
-* If you want to add and manage users from the command line or from your own custom web application, you can use an HTTP-based API. See [User Provisioning API](https://doc.owncloud.com/server/10.4/admin_manual/configuration/user/user_provisioning_api.html).
-
-## Connect to your ownCloud server from a Desktop Client
-
-### Prerequisites
-
-[Install the 
-
-## Connect to your ownCloud server from an Android Client
-
-## Connect to your ownCloud server from an iOS Client
-
-## Q&A
-
-### How Much Scale Can the Above Deployment Support?
-
-The above deployment can support up to 150 users with up to 10TB of data.
-
-### What Kind of Availability Can the Above Deployment Offer?
-
-The availability depends on the file system and backup approach you use:
-
-* On a Btrfs file system, you can achieve zero-downtime backups by using snapshots. (However, component failure will still cause interruption of service.)
-
-* On other kinds of file systems, you can use nightly backup schemes to limit service interruptions to less busy times.
-
-### What SMB limitations are there When Using Ubuntu 18.04?
-
-Ubuntu 18.04 includes smbclient 4.7.6, which has a known limitation of only using version 1 of the SMB protocol.
-
-### What are prefork and mod_php?
-
-[prefork and mod_php](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#multi-processing-module-mpm)
-
-### Where can I Learn More about ownClould Console (occ) Commands?
-
-[Using the occ Command](https://doc.owncloud.org/server/10.4/admin_manual/configuration/server/occ_command.html)
+  A: [Using the occ Command](https://doc.owncloud.org/server/10.4/admin_manual/configuration/server/occ_command.html)

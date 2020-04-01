@@ -1,3 +1,7 @@
+---
+---
 # andyjlewis.github.io
 
-https://andyjlewis.github.io/owncloud-install_connect
+[Installing and Using ownCloud on Ubuntu](owncloud/quickstart_ubuntu)
+
+[Installing and Using ownCloud on Docker](owncloud/quickstart_docker)
