@@ -1,4 +1,4 @@
-## Add a User Account
+## Add a User
 
 To add a user:
 
