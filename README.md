@@ -1,5 +1,3 @@
----
----
 # andyjlewis.github.io
 
 [Installing and Using ownCloud on Ubuntu](https://andyjlewis.github.io/owncloud/quickstart_ubuntu)
